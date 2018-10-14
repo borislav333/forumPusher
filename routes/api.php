@@ -18,3 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 */
 \Illuminate\Support\Facades\Route::apiResource('/question','QuestionController');
+\Illuminate\Support\Facades\Route::apiResource('/category','CategoryController');
