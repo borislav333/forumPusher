@@ -10,6 +10,14 @@ use Illuminate\Support\Facades\Response;
 class QuestionController extends Controller
 {
     /**
+     * QuestionController constructor.
+     */
+    public function __construct()
+    {
+        // $this->middleware('auth:api', ['except' => ['login','signup']]);
+        $this->middleware('JWT', ['except' => ['index','show']]);
+    }
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
