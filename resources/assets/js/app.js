@@ -11,7 +11,11 @@ window.Vue = require('vue');
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 
+
 Vue.use(Vuetify)
+
+/*import User from './Helpers/User.js'
+windows.User=User;*/
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -21,7 +25,9 @@ Vue.use(Vuetify)
 
 Vue.component('AppHome', require('./components/AppHome.vue'));
 import router from './router/router.js'
+import store from './store/store.js'
 const app = new Vue({
     el: '#app',
-    router
+    router,
+    store,
 });
